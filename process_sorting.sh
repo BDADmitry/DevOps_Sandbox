@@ -2,7 +2,7 @@
 
 read -p "Enter file name:" FILENAME
 
-if [ -e $FILENAME ]; then
+if [ -f $FILENAME ]; then
     echo "File $FILENAME exists in $(pwd)"
 else
     touch $FILENAME

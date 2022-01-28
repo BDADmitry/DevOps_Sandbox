@@ -8,7 +8,7 @@
      10 ?        00:00:00 rcu_tasks_rude_
      11 ?        00:00:00 rcu_tasks_trace
      12 ?        00:00:00 ksoftirqd/0
-     13 ?        00:00:01 rcu_sched
+     13 ?        00:00:03 rcu_sched
      14 ?        00:00:00 migration/0
      15 ?        00:00:00 idle_inject/0
      16 ?        00:00:00 cpuhp/0
@@ -51,7 +51,6 @@
     106 ?        00:00:00 ecryptfs-kthrea
     108 ?        00:00:00 kthrotld
     109 ?        00:00:00 acpi_thermal_pm
-    113 ?        00:00:00 kworker/2:4-events
     115 ?        00:00:00 vfio-irqfd-clea
     117 ?        00:00:00 mld
     118 ?        00:00:00 ipv6_addrconf
@@ -79,7 +78,7 @@
     206 ?        00:00:00 scsi_tmf_5
     233 ?        00:00:00 jbd2/nvme0n1p6-
     234 ?        00:00:00 ext4-rsv-conver
-    274 ?        00:00:05 systemd-journal
+    274 ?        00:00:08 systemd-journal
     296 ?        00:00:00 systemd-udevd
     300 ?        00:00:00 loop0
     322 ?        00:00:00 loop1
@@ -111,40 +110,37 @@
     704 ?        00:00:00 systemd-resolve
     705 ?        00:00:00 systemd-timesyn
     739 ?        00:00:00 accounts-daemon
-    740 ?        00:00:00 acpid
+    740 ?        00:00:01 acpid
     743 ?        00:00:00 avahi-daemon
     744 ?        00:00:00 cron
     748 ?        00:00:01 dbus-daemon
-    750 ?        00:00:11 NetworkManager
+    750 ?        00:00:18 NetworkManager
     757 ?        00:00:00 irqbalance
     760 ?        00:00:00 networkd-dispat
-    770 ?        00:00:00 rsyslogd
+    770 ?        00:00:02 rsyslogd
     771 ?        00:00:00 nvidia-persiste
     774 ?        00:00:07 snapd
     776 ?        00:00:00 switcheroo-cont
     779 ?        00:00:00 systemd-logind
-    781 ?        00:00:00 thermald
-    783 ?        00:00:01 udisksd
+    781 ?        00:00:01 thermald
+    783 ?        00:00:03 udisksd
     784 ?        00:00:00 wpa_supplicant
     790 ?        00:00:00 avahi-daemon
-    841 ?        00:00:00 cups-browsed
-    883 ?        00:00:00 cupsd
     888 ?        00:00:00 gdm3
-    889 ?        00:00:00 dbus
     911 ?        00:00:00 unattended-upgr
     912 ?        00:00:00 gdm-session-wor
     917 ?        00:00:00 systemd
     919 ?        00:00:00 (sd-pam)
-    929 ?        00:00:01 pulseaudio
+    929 ?        00:00:26 pulseaudio
     931 ?        00:00:00 tracker-miner-f
     934 ?        00:00:00 gnome-keyring-d
-    939 ?        00:00:00 dbus-daemon
+    939 ?        00:00:01 dbus-daemon
     940 ?        00:00:00 rtkit-daemon
     942 tty2     00:00:00 gdm-x-session
-    946 tty2     00:07:53 Xorg
+    946 tty2     00:12:27 Xorg
     947 ?        00:00:00 gvfsd
     954 ?        00:00:00 gvfsd-fuse
-    973 ?        00:00:00 gvfs-udisks2-vo
+    973 ?        00:00:01 gvfs-udisks2-vo
     978 ?        00:00:00 gvfs-goa-volume
     982 ?        00:00:00 goa-daemon
    1002 ?        00:00:00 goa-identity-se
@@ -152,22 +148,22 @@
    1015 ?        00:00:00 gvfs-afc-volume
    1023 ?        00:00:00 gvfs-mtp-volume
    1028 ?        00:00:00 upowerd
-   1069 ?        00:01:53 irq/140-nvidia
+   1069 ?        00:04:15 irq/140-nvidia
    1070 ?        00:00:00 nvidia
-   1071 ?        00:00:01 nv_queue
+   1071 ?        00:00:02 nv_queue
    1134 tty2     00:00:00 gnome-session-b
    1201 ?        00:00:00 ssh-agent
    1220 ?        00:00:00 at-spi-bus-laun
    1225 ?        00:00:00 dbus-daemon
    1229 ?        00:00:00 gnome-session-c
    1236 ?        00:00:00 gnome-session-b
-   1250 ?        00:06:28 gnome-shell
+   1250 ?        00:12:48 gnome-shell
    1271 ?        00:00:00 ibus-daemon
    1275 ?        00:00:00 ibus-dconf
    1276 ?        00:00:00 ibus-extension-
    1278 ?        00:00:00 ibus-x11
    1280 ?        00:00:00 ibus-portal
-   1294 ?        00:00:02 at-spi2-registr
+   1294 ?        00:00:03 at-spi2-registr
    1298 ?        00:00:00 xdg-permission-
    1300 ?        00:00:00 gnome-shell-cal
    1309 ?        00:00:00 evolution-sourc
@@ -196,8 +192,8 @@
    1434 ?        00:00:00 gsd-disk-utilit
    1460 ?        00:00:00 evolution-alarm
    1492 ?        00:00:00 gsd-printer
-   1498 ?        00:00:29 skypeforlinux
-   1499 ?        00:00:07 snap-store
+   1498 ?        00:00:42 skypeforlinux
+   1499 ?        00:00:08 snap-store
    1523 ?        00:00:00 ibus-engine-sim
    1541 ?        00:00:00 colord
    1547 ?        00:00:00 xdg-document-po
@@ -209,83 +205,86 @@
    1803 ?        00:00:00 skypeforlinux
    1804 ?        00:00:00 skypeforlinux
    1806 ?        00:00:00 skypeforlinux
-   1808 ?        00:00:02 fwupd
-   1832 ?        00:05:23 opera
-   1925 ?        00:00:16 skypeforlinux
-   1929 ?        00:00:10 skypeforlinux
+   1832 ?        00:09:59 opera
+   1925 ?        00:00:24 skypeforlinux
+   1929 ?        00:00:16 skypeforlinux
    1936 ?        00:00:00 skypeforlinux
    1946 ?        00:00:00 opera
    1947 ?        00:00:00 opera
-   1950 ?        00:00:37 skypeforlinux
+   1950 ?        00:00:47 skypeforlinux
    1967 ?        00:00:00 opera
-   2277 ?        00:05:09 opera
-   2286 ?        00:00:43 opera
+   2277 ?        00:11:16 opera
+   2286 ?        00:01:01 opera
    2300 ?        00:00:00 opera
    2311 ?        00:00:03 opera
    2321 ?        00:00:00 snap
    2454 ?        00:00:01 opera
-   2475 ?        00:00:08 opera
-   2476 ?        00:04:09 opera
+   2475 ?        00:00:12 opera
+   2476 ?        00:09:23 opera
    2607 ?        00:00:00 opera
    2619 ?        00:00:00 opera
    2626 ?        00:00:00 opera
-   2633 ?        00:00:03 opera
+   2633 ?        00:00:04 opera
    2640 ?        00:00:00 opera
-   2644 ?        00:00:06 opera
-   2648 ?        00:00:05 opera
+   2644 ?        00:00:08 opera
+   2648 ?        00:00:07 opera
    2654 ?        00:00:02 opera
-   2661 ?        00:06:18 opera
-   2668 ?        00:00:41 opera
+   2661 ?        00:06:19 opera
+   2668 ?        00:01:14 opera
    2669 ?        00:00:37 opera
    2672 ?        00:00:00 opera
-   2677 ?        00:00:03 opera
-   2690 ?        00:00:13 opera
+   2677 ?        00:00:04 opera
+   2690 ?        00:00:16 opera
    2709 ?        00:00:01 opera
-   2715 ?        00:00:03 opera
+   2715 ?        00:00:04 opera
    2730 ?        00:00:01 opera
-   2761 ?        00:00:01 opera
-   2861 ?        00:00:00 opera
+   2761 ?        00:00:15 opera
+   2861 ?        00:00:01 opera
    3426 ?        00:00:03 opera
    3431 ?        00:00:00 skypeforlinux
-   4292 ?        00:00:01 opera
-   4319 ?        00:00:20 opera
-   4343 ?        00:00:00 opera
-   4360 ?        00:00:01 opera
-   4371 ?        00:00:01 opera
-   4385 ?        00:00:10 opera
+   4292 ?        00:00:03 opera
+   4319 ?        00:00:24 opera
+   4343 ?        00:00:01 opera
+   4360 ?        00:00:02 opera
+   4371 ?        00:00:02 opera
+   4385 ?        00:00:18 opera
    4461 ?        00:00:00 gvfsd-metadata
    4467 ?        00:00:00 update-notifier
-   4521 ?        00:00:03 update-manager
    5445 ?        00:00:00 loop19
    5550 ?        00:00:00 loop20
    8626 ?        00:00:00 polkitd
    8630 ?        00:00:00 ModemManager
    9801 ?        00:00:00 ssh-agent
   11259 ?        00:00:00 kworker/u8:3-events_unbound
-  11509 ?        00:00:54 opera
-  11835 ?        00:00:09 opera
-  11848 ?        00:00:50 opera
-  12047 ?        00:00:29 opera
-  12063 ?        00:00:25 opera
-  12702 ?        00:00:00 kworker/u8:1-events_unbound
-  12762 ?        00:00:00 kworker/u8:0-ext4-rsv-conversion
+  11509 ?        00:00:58 opera
+  11835 ?        00:00:10 opera
+  11848 ?        00:00:56 opera
+  12047 ?        00:00:30 opera
+  12063 ?        00:00:26 opera
   12767 ?        00:00:00 opera_autoupdat <defunct>
-  13067 ?        00:00:00 kworker/1:1-mm_percpu_wq
-  13302 ?        00:00:09 gnome-terminal-
-  13310 pts/0    00:00:00 bash
   13703 ?        00:00:00 opera
   13717 ?        00:00:00 opera
-  13833 ?        00:00:00 kworker/3:1-events
-  13837 ?        00:00:14 nautilus
+  13837 ?        00:00:51 nautilus
   14243 ?        00:00:00 gvfsd-network
   14257 ?        00:00:00 gvfsd-dnssd
-  14591 ?        00:00:00 kworker/0:1-events
   15203 ?        00:00:00 opera_autoupdat <defunct>
-  15369 ?        00:00:00 kworker/0:0-events
-  15370 ?        00:00:00 kworker/3:2-events
-  15592 ?        00:00:00 kworker/2:1-events
-  15792 ?        00:00:00 opera
-  15850 ?        00:00:00 kworker/1:0-events
-  16395 ?        00:00:00 kworker/2:0-events_freezable
-  16401 pts/0    00:00:00 process_sorting
-  16419 pts/0    00:00:00 ps
+  15792 ?        00:05:57 opera
+  19170 ?        00:00:00 cupsd
+  19172 ?        00:00:00 cups-browsed
+  19283 ?        00:00:00 kworker/u8:1-events_unbound
+  19634 ?        00:00:00 kworker/3:1-events
+  19837 ?        00:00:00 kworker/2:0-events
+  19888 ?        00:00:08 opera
+  19905 ?        00:00:00 opera
+  20150 ?        00:00:00 kworker/3:0-events
+  20450 ?        00:00:00 kworker/1:0-events
+  21626 ?        00:00:00 kworker/1:1-events
+  21627 ?        00:00:00 kworker/u8:2-ext4-rsv-conversion
+  21984 ?        00:00:00 kworker/0:1-events
+  22402 ?        00:00:00 kworker/2:2-events
+  22422 ?        00:00:00 kworker/0:2-cgroup_destroy
+  22820 ?        00:00:01 gnome-terminal-
+  22828 pts/0    00:00:00 bash
+  22917 ?        00:00:00 kworker/0:0-cgroup_destroy
+  22918 pts/0    00:00:00 process_sorting
+  22923 pts/0    00:00:00 ps
