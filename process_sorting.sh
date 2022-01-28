@@ -2,8 +2,8 @@
 
 read -p "Enter file name:" FILENAME
 
-if [ -f $FILENAME ]; then
-    echo "File $FILENAME exists in $(pwd)."
+if [ -e $FILENAME ]; then
+    echo "File $FILENAME exists in $(pwd)"
 else
     touch $FILENAME
     echo "$FILENAME created in $(pwd)"
